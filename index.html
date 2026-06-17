@@ -151,11 +151,12 @@
 
         .hero-content h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4.75rem;
+            font-size: clamp(2rem, 5.2vw, 4.25rem);
             font-weight: 300;
-            line-height: 1.08;
+            line-height: 1.12;
             color: var(--primary);
             margin-bottom: 1.5rem;
+            white-space: nowrap;
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
@@ -886,7 +887,6 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .hero .container { grid-template-columns: 1fr; gap: 3rem; }
-            .hero-content h1 { font-size: 3.5rem; }
             .about-grid { grid-template-columns: 1fr; gap: 3rem; }
             .framework-steps { grid-template-columns: repeat(2, 1fr); }
             .speaking-content { grid-template-columns: 1fr; }
@@ -898,7 +898,6 @@
 
         @media (max-width: 768px) {
             nav ul { display: none; }
-            .hero-content h1 { font-size: 2.5rem; }
             .section-title { font-size: 2.5rem; }
             .about-content .section-title { font-size: 2rem; }
             .framework-steps { grid-template-columns: 1fr; }
@@ -931,7 +930,7 @@
             <div class="hero-content">
                 <div class="hero-eyebrow">Nicole L. Turner Enterprise</div>
                 <h1>
-                    Transform from the<br>
+                    Transform from the
                     <strong>Inside-Out</strong>
                 </h1>
                 <p class="positioning">
