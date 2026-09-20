@@ -57,7 +57,12 @@ function articlePage(a){
 <main><section class="article-hero"><div class="wrap"><div class="category">${esc(a.category)}</div><h1>${esc(a.title)}</h1></div></section><section class="article"><div class="wrap"><div class="article-inner">${markdown(a.body)}${promo}</div></div></section></main>
 <footer><div class="wrap"><div class="footerlinks"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/theculturepro/">LinkedIn</a><a target="_blank" rel="noopener noreferrer" href="https://themanualnobodygaveus.substack.com/">Substack</a><a target="_blank" rel="noopener noreferrer" href="https://theculturepro.com/">The Culture Pro®</a><a target="_blank" rel="noopener noreferrer" href="https://turnertraininginstitute.com/">Turner Training Institute™</a><a target="_blank" rel="noopener noreferrer" href="https://detoxforyourlife.com/">Detox For Your Life®</a></div></div></footer></body></html>`;
 }
-const articles=fs.readdirSync(CONTENT).filter(f=>f.endsWith('.md')).map(parseFile).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+const categoryOrder={Career:0,Leadership:1,Life:2};
+const articles=fs.readdirSync(CONTENT).filter(f=>f.endsWith('.md')).map(parseFile).sort((a,b)=>{
+  const byDate=String(b.date).localeCompare(String(a.date));
+  if(byDate) return byDate;
+  return (categoryOrder[a.category]??99)-(categoryOrder[b.category]??99);
+});
 fs.mkdirSync(OUT,{recursive:true});
 for(const a of articles) fs.writeFileSync(path.join(OUT,a.slug+'.html'),articlePage(a));
 let index=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
