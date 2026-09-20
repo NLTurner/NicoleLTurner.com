@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: NLTurner/NicoleLTurner.com
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Career", "Leadership", "Life", "Organizations", "Work", "Change", "Technology", "Other"] }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "MMMM D, YYYY", time_format: false }
+      - { label: "Featured on Homepage", name: "featured", widget: "boolean", default: true }
+      - { label: "End-of-Article CTA Title", name: "cta_title", widget: "string", required: false }
+      - { label: "End-of-Article CTA Text", name: "cta_text", widget: "text", required: false }
+      - { label: "End-of-Article CTA Label", name: "cta_label", widget: "string", required: false }
+      - { label: "End-of-Article CTA URL", name: "cta_url", widget: "string", required: false }
+      - { label: "Article", name: "body", widget: "markdown" }
