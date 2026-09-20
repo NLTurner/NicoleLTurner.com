@@ -1,7 +1,7 @@
 name: Build Articles
 on:
   push:
-    branches: [main]
+    branches: [main, cms-setup]
     paths:
       - "content/articles/**"
   workflow_dispatch:
