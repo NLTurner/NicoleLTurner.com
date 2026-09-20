@@ -1,0 +1,67 @@
+media:
+  input: images/uploads
+  output: /images/uploads
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: content/articles
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, category, date, featured]
+      primary: title
+      sort: [date, title]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: [Career, Leadership, Life, Organizations, Work, Change, Technology, Other]
+      - name: excerpt
+        label: Excerpt
+        type: text
+        required: true
+        description: Short description shown on the NicoleLTurner.com homepage.
+      - name: date
+        label: Publish Date
+        type: date
+        required: true
+        options:
+          time: false
+          format: yyyy-MM-dd
+      - name: featured
+        label: Eligible for Homepage
+        type: boolean
+        default: true
+        description: The homepage automatically displays the three newest eligible articles.
+      - name: cta_title
+        label: End-of-Article CTA Title
+        type: string
+        required: false
+      - name: cta_text
+        label: End-of-Article CTA Text
+        type: text
+        required: false
+      - name: cta_label
+        label: End-of-Article CTA Button Text
+        type: string
+        required: false
+      - name: cta_url
+        label: End-of-Article CTA URL
+        type: string
+        required: false
+      - name: body
+        label: Article
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: false
+          switcher: true
