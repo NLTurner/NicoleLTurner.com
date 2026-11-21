@@ -97,6 +97,26 @@ footer{background:var(--plum);color:white;padding:40px 0} footer .wrap{display:f
 .portfolio-tile:hover img,.portfolio-tile:focus-visible img{transform:scale(1.025)}
 @media(max-width:900px){.portfolio-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.portfolio-list{grid-template-columns:1fr 1fr;gap:6px}}
+
+/* Service offerings: editorial, compact and visually distinct from the venture portfolio. */
+#experience .exp-grid{background:var(--cream);color:var(--ink);grid-template-columns:repeat(3,minmax(0,1fr));padding:30px max(26px,calc((100vw - 1200px)/2));gap:28px;}
+#experience .exp{background:transparent !important;min-height:0;padding:12px 24px 12px 18px;justify-content:flex-start;border-right:1px solid rgba(30,20,20,.2);border-left:4px solid var(--mustard);}
+#experience .exp:nth-child(2){border-left-color:var(--pink)}
+#experience .exp:nth-child(3){border-left-color:var(--olive);border-right:0}
+#experience .exp h3{font-size:clamp(25px,2.5vw,34px);line-height:1.08;margin:10px 0 12px}
+#experience .exp p{font-size:15px;line-height:1.5;margin:0 0 18px}
+#experience .exp a{font-size:14px;margin-top:auto;text-decoration:underline;text-underline-offset:3px}
+#experience .exp .kicker{font-size:10px;letter-spacing:.08em}
+/* The portfolio should flow naturally into About, without a large empty band. */
+#work{padding-bottom:18px !important}
+#about{padding-top:38px !important}
+@media(max-width:900px){
+ #experience .exp-grid{grid-template-columns:1fr;padding:25px 24px;gap:15px}
+ #experience .exp{border-right:0;border-bottom:1px solid rgba(30,20,20,.18);padding:10px 18px 20px}
+ #experience .exp:nth-child(3){border-bottom:0}
+ #work{padding-bottom:16px !important}
+ #about{padding-top:32px !important}
+}
 </style>
 </head>
 <body>
@@ -121,9 +141,6 @@ footer{background:var(--plum);color:white;padding:40px 0} footer .wrap{display:f
 <article class="note"><small>Technology + Life</small><h3>Are We Losing the Ability to Figure Things Out?</h3><p>When every answer is a tap away, are we still giving ourselves the chance to figure things out?</p><a href="articles/are-we-losing-the-ability-to-figure-things-out.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article>
 <article class="note"><small>Life + Possibility</small><h3>The People Who See Possibilities Before Everyone Else</h3><p>What if the future you can imagine is bigger than the one other people see for you?</p><a href="articles/the-people-who-see-possibilities-before-everyone-else.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article>
 <article class="note"><small>Opportunity</small><h3>The Unwritten Rules of Getting Access</h3><p>What you know matters. But who knows you can determine which doors open.</p><a href="articles/the-unwritten-rules-of-getting-access.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article>
-
-
-
 </div><div class="insights-cta"><a href="insights.html" rel="noopener noreferrer" target="_blank">Explore all Insights →</a></div></div></section>
 <section class="things" id="work"><div class="wrap">
 <div class="things-top"><div><div class="kicker">The body of work</div><h2>Ideas don't always stay ideas.</h2></div><p>Some become businesses. Some become books, frameworks, programs, courses, or communities. These are some of the places my ideas have taken me.</p></div>
