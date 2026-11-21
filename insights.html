@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Insights | Nicole L. Turner</title>
+<link href="/NLT_favicon_512.png" rel="icon" type="image/png"/>
+<meta content="Nicole L. Turner. Speaker, author, strategist, executive advisor, business professor, entrepreneur, and nonprofit board leader." name="description"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+:root{--cream:#fbf4e9;--ink:#171511;--orange:#ef593a;--plum:#6e2347;--mustard:#f3cf58;--olive:#b8c987;--pink:#ee9bac;--tan:#d9aa83;--white:#fffdf9}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
+a{color:inherit} .wrap{width:min(1200px,92vw);margin:auto}
+header{background:var(--cream);position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(0,0,0,.08)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:19px 0} .name{font-family:'Libre Baskerville',Georgia,serif;font-size:24px;font-weight:700;text-decoration:none}
+.nav{display:flex;gap:22px;align-items:center;font-size:13px} .nav a{text-decoration:none} .nav .invite{background:var(--orange);color:#fff;padding:11px 17px;border-radius:30px;font-weight:700}
+.hero{display:grid;grid-template-columns:.9fr 1.1fr;min-height:690px;align-items:stretch} .hero-copy{padding:80px 6vw 70px max(4vw,40px);display:flex;flex-direction:column;justify-content:center}
+.eyebrow,.kicker{font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase} .hero h1{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(60px,7vw,108px);line-height:.88;letter-spacing:-.055em;margin:16px 0 30px}
+.hero p{font-size:18px;line-height:1.55;max-width:580px} .hero .topics{font-weight:600} .hero-photo img{width:100%;height:100%;min-height:690px;object-fit:cover;object-position:center 28%;display:block}
+.hero-cta{display:inline-block;width:max-content;margin-top:18px;background:var(--ink);color:white;text-decoration:none;padding:14px 18px;font-weight:700}
+.ticker{background:var(--orange);overflow:hidden;white-space:nowrap;padding:15px 0;font-weight:800;letter-spacing:.08em;font-size:13px}
+.ticker-track{display:flex;width:max-content;animation:tickerMove 24s linear infinite}
+.ticker-group{display:flex;flex-shrink:0;align-items:center}
+.ticker-group span{display:inline-block;padding:0 20px}
+@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section{padding:95px 0} .intro-grid{display:grid;grid-template-columns:.55fr 1.45fr;gap:70px} .intro-grid .who{font-family:'Libre Baskerville',Georgia,serif;font-size:34px;font-weight:700}
+.intro-grid h2,.section-title{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(52px,6vw,88px);line-height:.92;letter-spacing:-.05em;margin:0} .intro-grid p{font-size:19px;line-height:1.65;max-width:760px}
+.experience{padding:0;background:var(--plum);color:white} .experience-head{padding:85px 0 50px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.experience h2{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(58px,7vw,100px);line-height:.88;letter-spacing:-.055em;margin:10px 0 0} .experience-head p{font-size:19px;line-height:1.6;max-width:520px}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);color:var(--ink)} .exp{min-height:360px;padding:38px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(0,0,0,.15)}
+.exp:nth-child(1){background:var(--mustard)} .exp:nth-child(2){background:var(--pink)} .exp:nth-child(3){background:var(--olive)} .exp h3{font-family:'Libre Baskerville',Georgia,serif;font-size:43px;line-height:1;margin:0 0 18px}
+.exp p{font-size:17px;line-height:1.55} .exp a{font-weight:800;text-decoration:none}
+.thinking{background:var(--orange)} .thinking-head{margin-top:0;display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:45px} .thinking-head p{max-width:390px;font-size:17px;line-height:1.55}
+.notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px} .note{background:var(--white);padding:28px;min-height:285px;display:flex;flex-direction:column;justify-content:space-between}
+.note:nth-child(2){background:var(--mustard)} .note:nth-child(3){background:var(--pink)} .note:nth-child(4){background:var(--olive)} .note:nth-child(5){background:var(--tan)} .note:nth-child(6){background:var(--white)} .note h3{font-family:'Libre Baskerville',Georgia,serif;font-size:31px;line-height:1.05;margin:12px 0} .note small{font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.things{padding:80px 0} .things-top{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;margin-bottom:40px} .things-top h2{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(54px,6vw,86px);line-height:.9;letter-spacing:-.05em;margin:8px 0}
+.things-top p{font-size:18px;line-height:1.6} .things-list{display:grid;grid-template-columns:repeat(5,1fr)} .thing{min-height:260px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(0,0,0,.12)}
+.thing:nth-child(1){background:var(--plum);color:white} .thing:nth-child(2){background:var(--tan)} .thing:nth-child(3){background:var(--olive)} .thing:nth-child(4){background:var(--pink)} .thing:nth-child(5){background:var(--mustard)}
+.thing h3{font-family:'Libre Baskerville',Georgia,serif;font-size:28px;line-height:1.05;margin:0} .thing p{font-size:14px;line-height:1.45} .thing a{font-weight:800;text-decoration:none;font-size:14px}
+.about{background:var(--cream);padding:90px 0} .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:55px;align-items:center} .about-photo img{width:100%;height:560px;object-fit:cover;object-position:center top;display:block}
+.about h2{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(54px,6vw,84px);line-height:.92;letter-spacing:-.05em;margin:8px 0 25px} .about p{font-size:18px;line-height:1.65;max-width:700px}
+.credentials{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.7;margin-top:25px}
+.invite-section{background:var(--olive);padding:80px 0} .invite-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center} .invite-section h2{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(58px,7vw,96px);line-height:.86;letter-spacing:-.055em;margin:8px 0 20px}
+.invite-section p{font-size:18px;line-height:1.6} .ways{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0} .ways span{border:1px solid var(--ink);border-radius:30px;padding:9px 12px;font-size:12px}
+.form{background:var(--white);padding:30px;box-shadow:10px 10px 0 var(--pink)} .form input,.form textarea{width:100%;border:0;border-bottom:1px solid #aaa;padding:14px 3px;margin-bottom:10px;font:inherit;background:transparent} .form textarea{min-height:100px} .form button{border:0;background:var(--ink);color:white;padding:14px 18px;font-weight:800;margin-top:14px}
+footer{background:var(--plum);color:white;padding:40px 0} footer .wrap{display:flex;justify-content:space-between;align-items:end;gap:30px} footer h3{font-family:'Libre Baskerville',Georgia,serif;font-size:30px;margin:0 0 6px} .links{display:flex;gap:18px;flex-wrap:wrap;font-size:13px} .links a{text-decoration:none}
+@media(max-width:900px){.nav a:not(.invite){display:none}.hero,.intro-grid,.experience-head,.things-top,.about-grid,.invite-grid{grid-template-columns:1fr}.hero-photo img{min-height:520px;height:520px}.exp-grid,.notes,.things-list{grid-template-columns:1fr}.exp,.thing{min-height:220px}footer .wrap{display:block}.links{margin-top:20px}}
+
+/* v9: give Writing section clear breathing room below preceding panels */
+#thinking.thinking { padding-top: 86px !important; }
+#thinking .thinking-head { margin-top: 0 !important; }
+#thinking .kicker { margin-top: 0 !important; }
+
+/* v10 refinements */
+.writing-kicker { margin-bottom: 22px !important; }
+#thinking .section-title { margin-top: 0 !important; }
+
+/* Body of Work: reduce oversized empty area and keep intro visually connected */
+#work { padding-top: 58px !important; padding-bottom: 54px !important; }
+#work .things-top {
+  align-items: flex-start !important;
+  gap: 48px !important;
+  margin-bottom: 44px !important;
+}
+#work .things-top > p {
+  margin-top: 34px !important;
+  align-self: flex-start !important;
+}
+
+/* Pull About closer to the body-of-work cards */
+#about { padding-top: 68px !important; }
+#about .about-grid, #about .about-wrap { margin-top: 0 !important; }
+
+
+/* v11 requested spacing refinements */
+#experience .experience-head > p {
+  transform: translateY(-28px);
+}
+#work .things-top > p {
+  margin-top: 62px !important;
+}
+
+/* v12 requested refinement */
+#experience .experience-head > p {
+  transform: translateY(-50px) !important;
+}
+
+/* Experience and impact, consistent with the existing site palette */
+
+/* Approved portfolio and Insights update */
+.insights-cta{display:flex;justify-content:flex-end;margin-top:20px}
+.insights-cta a{font-size:16px;font-weight:800;text-underline-offset:4px}
+.portfolio-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.portfolio-tile{display:block;overflow:hidden;aspect-ratio:0.91;background:#eee}
+.portfolio-tile img{display:block;width:100%;height:100%;object-fit:fill;transition:transform .25s ease}
+.portfolio-tile:hover img,.portfolio-tile:focus-visible img{transform:scale(1.025)}
+@media(max-width:900px){.portfolio-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.portfolio-list{grid-template-columns:1fr 1fr;gap:6px}}
+
+.insights-page{background:var(--orange);min-height:70vh}
+.insights-page h1{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(52px,6.5vw,94px);line-height:1;letter-spacing:-.05em;max-width:900px;margin:18px 0 22px}
+.insights-lead{font-size:19px;line-height:1.6;max-width:750px;margin-bottom:40px}
+.insights-page .note{min-height:290px}
+@media(max-width:900px){.insights-page .notes{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><a class="name" href="#top">NICOLE L. TURNER</a><nav class="nav"><a href="index.html#experience">Work</a><a href="insights.html" rel="noopener noreferrer" target="_blank">Insights</a><a href="index.html#work">Ventures</a><a href="index.html#about">About</a><a class="invite" href="index.html#invite">LET'S TALK</a></nav></div></header>
+<main id="top">
+
+
+
+
+
+
+
+</main>
+<section class="insights-page"><div class="wrap"><div class="kicker">WRITING + OBSERVATIONS</div><h1>Things worth thinking about.</h1><p class="insights-lead">I write about the things that catch my attention, raise questions, or deserve a closer look. From business and technology to life, relationships, and human behavior, my interests don't fit neatly into one category. Neither does my writing.</p><div class="notes"><article class="note"><small>Technology + Life</small><h3>Are We Losing the Ability to Figure Things Out?</h3><p>When every answer is a tap away, are we still giving ourselves the chance to figure things out?</p><a href="articles/are-we-losing-the-ability-to-figure-things-out.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article><article class="note"><small>Life + Possibility</small><h3>The People Who See Possibilities Before Everyone Else</h3><p>What if the future you can imagine is bigger than the one other people see for you?</p><a href="articles/the-people-who-see-possibilities-before-everyone-else.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article><article class="note"><small>Opportunity</small><h3>The Unwritten Rules of Getting Access</h3><p>What you know matters. But who knows you can determine which doors open.</p><a href="articles/the-unwritten-rules-of-getting-access.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article><article class="note"><small>Career</small><h3>Reinvention After Disruption</h3><p>When the job changes or disappears, the knowledge and expertise you've built do not disappear with it.</p><a href="articles/reinvention-after-disruption.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article><article class="note"><small>Leadership</small><h3>When Leadership Becomes Liability</h3><p>What happens when a known pattern of leadership behavior is producing measurable organizational harm?</p><a href="articles/when-leadership-becomes-liability.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article><article class="note"><small>Life</small><h3>The Freedom of Changing Your Mind</h3><p>Changing your mind doesn't erase who you were. Sometimes it simply makes room for who you're becoming.</p><a href="articles/the-freedom-of-changing-your-mind.html" rel="noopener noreferrer" target="_blank"><b>Read more →</b></a></article></div></div></section><footer><div class="wrap"><div><h3>NICOLE L. TURNER</h3><div>There's always something worth thinking about.</div></div><div class="links"><a href="https://www.linkedin.com/in/thenicolelturner/" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://themanualnobodygaveus.substack.com/" rel="noopener noreferrer" target="_blank">Substack</a><a href="https://theculturepro.com/" rel="noopener noreferrer" target="_blank">The Culture Pro®</a><a href="https://turnertraininginstitute.com/" rel="noopener noreferrer" target="_blank">Turner Training Institute™</a><a href="https://detoxforyourlife.com/" rel="noopener noreferrer" target="_blank">Detox For Your Life®</a></div></div></footer>
+</body></html>
